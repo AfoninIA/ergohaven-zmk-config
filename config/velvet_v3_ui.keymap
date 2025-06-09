@@ -20,8 +20,8 @@
 
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "HRL";
-            bindings = <&none>, <&none>;
+            label = "HML";
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
