@@ -55,11 +55,18 @@
             bindings = <&kp LPAR>, <&par_left>;
         };
 
-        bracket_td_ru: bracket_td_ru {
+        brace_td: brace_td {
             compatible = "zmk,behavior-tap-dance";
-            label = "BRACKET_TD_RU";
+            label = "BRACE_TD";
             #binding-cells = <0>;
-            bindings = <&en LPAR>, <&bracket_left_ru>;
+            bindings = <&kp LBRC>, <&d_brc>;
+        };
+
+        brace_td_ru: brace_td_ru {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BRACE_TD_RU";
+            #binding-cells = <0>;
+            bindings = <&en LBRC>, <&d_brc_ru>;
         };
     };
 
@@ -127,11 +134,18 @@
             label = "PAR_LEFT";
         };
 
-        bracket_left_ru: bracket_left_ru {
+        d_brc_ru: bracket_left_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&en LPAR &en RPAR &kp LEFT>;
+            bindings = <&en LBRC &en RBRC &kp LEFT>;
             label = "BRACKET_LEFT_RU";
+        };
+
+        d_brc: d_brc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC &kp RBRC &kp LEFT>;
+            label = "D_BRC";
         };
     };
 
@@ -172,10 +186,10 @@
 
         sym {
             bindings = <
-&trans  &kp HASH   &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                    &kp CARET  &kp DQT   &kp UNDER  &kp SQT   &kp PIPE  &trans
-&trans  &kp BSLH   &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                     &kp PRCNT  &par_td   &kp SEMI   &kp RBRC  &kp EXCL  &kp QUESTION
-&trans  &kp COMMA  &kp STAR  &kp COLON  &kp FSLH  &kp DLLR                     &kp AT     &kp LBRC  &kp TILDE  &kp AMPS  &kp DOT   &trans
-                   &trans    &trans     &trans    &mo 5      &trans    &trans  &trans     &trans    &kp LBKT   &kp RBKT
+&trans  &kp HASH   &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                    &kp CARET  &kp DQT    &kp UNDER  &kp SQT   &kp PIPE  &trans
+&trans  &kp BSLH   &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                     &kp PRCNT  &par_td    &kp SEMI   &kp RBRC  &kp EXCL  &kp QUESTION
+&trans  &kp COMMA  &kp STAR  &kp COLON  &kp FSLH  &kp DLLR                     &kp AT     &brace_td  &kp TILDE  &kp AMPS  &kp DOT   &trans
+                   &trans    &trans     &trans    &mo 5      &trans    &trans  &trans     &trans     &kp LBKT   &kp RBKT
             >;
 
             display-name = "sym";
@@ -184,10 +198,10 @@
         sym_ru {
             display-name = "sym_ru";
             bindings = <
-&kp RU_CYRILLIC_IO  &en HASH          &en LT    &kp EQUAL     &en GT       &en GRAVE                    &en CARET  &kp RU_DQT      &kp UNDER    &en SQT   &kp PIPE    &trans
-&kp RU_NUMERO       &kp RU_BACKSLASH  &kp LPAR  &kp MINUS     &kp RPAR     &kp PLUS                     &kp PRCNT  &par_td         &kp RU_SEMI  &kp RBRC  &kp EXCL    &kp RU_QMARK
-&trans              &kp RU_COMMA      &kp STAR  &kp RU_COLON  &kp RU_FSLH  &en DLLR                     &en AT     &en LEFT_BRACE  &en TILDE    &en AMPS  &kp RU_DOT  &trans
-                                      &trans    &trans        &trans       &mo 5      &trans    &trans  &trans     &trans          &en LBKT     &en RBKT
+&kp RU_CYRILLIC_IO  &en HASH          &en LT    &kp EQUAL     &en GT       &en GRAVE                    &en CARET  &kp RU_DQT    &kp UNDER    &en SQT   &kp PIPE    &trans
+&kp RU_NUMERO       &kp RU_BACKSLASH  &kp LPAR  &kp MINUS     &kp RPAR     &kp PLUS                     &kp PRCNT  &par_td       &kp RU_SEMI  &kp RBRC  &kp EXCL    &kp RU_QMARK
+&trans              &kp RU_COMMA      &kp STAR  &kp RU_COLON  &kp RU_FSLH  &en DLLR                     &en AT     &brace_td_ru  &en TILDE    &en AMPS  &kp RU_DOT  &trans
+                                      &trans    &trans        &trans       &mo 5      &trans    &trans  &trans     &trans        &en LBKT     &en RBKT
             >;
         };
 
