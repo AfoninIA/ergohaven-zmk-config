@@ -152,11 +152,10 @@
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings =
-                <&to_en &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&to_en &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_wait_time 10>,
-                <&macro_param_2to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_wait_time 10>,
-                <&to_ru>;
+                <&to_ru>,
+                <&macro_wait_time 10>;
 
             label = "DOUBLE_EN";
         };
