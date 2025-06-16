@@ -144,7 +144,7 @@
         d_brc: d_brc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LBRC &kp RBRC &kp LEFT>;
+            bindings = <&double_en LBRC RBRC &kp LEFT>;
             label = "D_BRC";
         };
 
