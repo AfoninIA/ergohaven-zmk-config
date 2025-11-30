@@ -82,6 +82,13 @@
             hold-trigger-key-positions = <6 8 7 19 18 30 31 32 20 44 45 33 21 9 10 22 34 35 23 11 41 42 43>;
             hold-trigger-on-release;
         };
+
+        zip_auto_mouse: zip_auto_mouse {
+            compatible = "zmk,input-processor-temp-layer";
+            #input-processor-cells = <2>;
+            require-prior-idle-ms = <800>;
+            excluded-positions = <>;
+        };
     };
 
     combos {
@@ -285,6 +292,7 @@
 
 &trackball_listener {
     input-processors =
+        <&zip_auto_mouse 6 500>,
         <&zip_x_scaler 18 20>,
         <&zip_y_scaler 15 20>;
 
