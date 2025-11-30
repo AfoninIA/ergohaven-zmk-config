@@ -208,10 +208,10 @@
 
         nav {
             bindings = <
-&trans  &trans          &kp N7            &kp N8         &kp N9         &trans                    &trans        &kp HOME      &kp END      &trans         &trans  &trans
-&trans  &hml LWIN LWIN  &hml LEFT_ALT N4  &hml LCTRL N5  &hml LSHFT N6  &trans                    &kp LEFT      &kp DOWN      &kp UP       &kp RIGHT      &trans  &trans
-&trans  &kp N0          &kp N1            &kp N2         &kp N3         &trans                    &kp LC(LEFT)  &kp LC(HOME)  &kp LC(END)  &kp LC(RIGHT)  &trans  &trans
-                        &trans            &trans         &trans         &trans  &trans    &trans  &mo 5         &trans        &trans       &trans
+&trans  &trans          &kp N7            &kp N8         &kp N9         &trans                       &trans        &kp HOME      &kp END      &trans         &trans  &trans
+&trans  &hml LWIN LWIN  &hml LEFT_ALT N4  &hml LCTRL N5  &hml LSHFT N6  &trans                       &kp LEFT      &kp DOWN      &kp UP       &kp RIGHT      &trans  &trans
+&trans  &kp N0          &kp N1            &kp N2         &kp N3         &kp LCTRL                    &kp LC(LEFT)  &kp LC(HOME)  &kp LC(END)  &kp LC(RIGHT)  &trans  &trans
+                        &trans            &trans         &trans         &trans     &trans    &trans  &mo 5         &trans        &trans       &trans
             >;
 
             display-name = "nav";
@@ -240,10 +240,10 @@
 
         adj {
             bindings = <
-&none  &none  &kp F1  &kp F2   &kp F3   &kp F4                   &none  &none         &none             &none         &none  &none
-&none  &none  &kp F5  &kp F6   &kp F7   &kp F8                   &none  &kp C_VOL_DN  &kp K_MUTE        &kp C_VOL_UP  &none  &none
-&none  &none  &kp F9  &kp F10  &kp F11  &kp F12                  &none  &kp K_PREV    &kp K_PLAY_PAUSE  &kp K_NEXT    &none  &none
-              &none   &none    &none    &none    &none    &none  &none  &none         &none             &none
+&none  &none  &kp F1  &kp F2   &kp F3   &kp F4                   &none  &kp LG(LS(PRINTSCREEN))  &none             &none         &none  &none
+&none  &none  &kp F5  &kp F6   &kp F7   &kp F8                   &none  &kp C_VOL_DN             &kp K_MUTE        &kp C_VOL_UP  &none  &none
+&none  &none  &kp F9  &kp F10  &kp F11  &kp F12                  &none  &kp K_PREV               &kp K_PLAY_PAUSE  &kp K_NEXT    &none  &none
+              &none   &none    &none    &none    &none    &none  &none  &none                    &none             &none
             >;
 
             display-name = "adj";
